@@ -147,7 +147,7 @@ class nnUNetTrainer(object):
 
         self.num_epochs = self.configuration_manager.num_epochs
         self.print_to_log_file(f"\nNumber of Training Epochs: {self.num_epochs}\n",
-            also_print_to_console=True, add_timestamp=Falsee)
+            also_print_to_console=True, add_timestamp=False)
 
         self.current_epoch = 0
         self.enable_deep_supervision = True
