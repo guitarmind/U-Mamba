@@ -146,8 +146,6 @@ class nnUNetTrainer(object):
         self.num_val_iterations_per_epoch = 50
 
         self.num_epochs = self.configuration_manager.num_epochs
-        self.print_to_log_file(f"\nNumber of Training Epochs: {self.num_epochs}\n",
-            also_print_to_console=True, add_timestamp=False)
 
         self.current_epoch = 0
         self.enable_deep_supervision = True
@@ -200,6 +198,9 @@ class nnUNetTrainer(object):
                                "Nature methods, 18(2), 203-211.\n"
                                "#######################################################################\n",
                                also_print_to_console=True, add_timestamp=False)
+
+        self.print_to_log_file(f"\nNumber of Training Epochs: {self.num_epochs}\n",
+            also_print_to_console=True, add_timestamp=False)
 
     def initialize(self):
         if not self.was_initialized:
