@@ -53,6 +53,13 @@ class ConfigurationManager(object):
         return preprocessor_class
 
     @property
+    def num_epochs(self) -> int:
+        if 'num_epochs' in self.configuration:
+            return self.configuration['num_epochs']
+        else:
+            return 1000
+
+    @property
     def batch_size(self) -> int:
         return self.configuration['batch_size']
 
