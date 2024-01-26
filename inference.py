@@ -14,6 +14,7 @@ import tifffile as tiff
 import cv2
 
 import argparse
+import pickle
 
 sys.path.insert(0, "/kaggle/input/u-mamba/umamba")
 from nnunetv2.paths import nnUNet_results, nnUNet_raw
@@ -33,7 +34,7 @@ parser.add_argument("--device", type=int, default=0, help="device ID")
 parser.add_argument("--checkpoint", type=str, default="best", help="best or final")
 
 args = parser.parse_args()
-os.environ["CUDA_VISIBLE_DEVICES"] = str(args.device)
+# os.environ["CUDA_VISIBLE_DEVICES"] = str(args.device)
 
 def main(args):
   model_folder = args.model_folder
