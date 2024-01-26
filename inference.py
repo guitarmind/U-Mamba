@@ -28,6 +28,7 @@ parser.add_argument("--model-folder", type=str, required=True,
                     help="path to model file")
 parser.add_argument("--output-path", type=str, required=True,
                     help="path to save output logits")
+parser.add_argument("--device", type=int, default=0, help="device ID")
 # parser.add_argument("--threshold", type=float, default=0.001, help="logits threshold")
 parser.add_argument("--checkpoint", type=str, default="best", help="best or final")
 
