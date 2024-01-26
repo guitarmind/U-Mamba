@@ -33,7 +33,7 @@ parser.add_argument("--device", type=int, default=0, help="device ID")
 parser.add_argument("--checkpoint", type=str, default="best", help="best or final")
 
 args = parser.parse_args()
-os.environ["CUDA_VISIBLE_DEVICES"] = args.device
+os.environ["CUDA_VISIBLE_DEVICES"] = str(args.device)
 
 def main(args):
   model_folder = args.model_folder
