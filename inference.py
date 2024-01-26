@@ -38,7 +38,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = str(args.device)
 def main(args):
   model_folder = args.model_folder
   output_path = args.output_path
-  threshold = args.threshold
+  # threshold = args.threshold
   checkpoint_mode = args.checkpoint
 
   test_image_paths = glob.glob("/kaggle/input/blood-vessel-segmentation/test/*/images/*.tif")
